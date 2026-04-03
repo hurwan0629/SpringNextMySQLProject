@@ -1,5 +1,6 @@
 package com.hurwan.jpaEntity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,9 +13,13 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="ID")
 	private Long id;
+	@Column(name="NAME")
 	private String name;
+	@Column(name="AGE")
 	private Integer age;
+	@Column(name="HOBBY")
 	private String hobby;
 	
 	protected User() {
